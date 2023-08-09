@@ -1,4 +1,4 @@
-function x=BellShapedNoise(f_low,f_up,t,n)
+function x=bellshapednoise(f_low,f_up,t,n)
 %% Simulate noise from bell-shaped spectrum
 %
 % Inputs:
