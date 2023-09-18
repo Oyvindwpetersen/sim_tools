@@ -36,7 +36,7 @@ end
 
 GG=zeros(size(SS));
 
-treshold_S==max(max(max(abs(SS))))*1e-16;
+treshold_S=max(max(max(abs(SS))))*1e-16;
 
 for n=1:length(omegaaxisinput)
     if  omegaaxisinput(n) > omegamax_chol | ~any(any(SS(:,:,n))) | max(max(abs(SS(:,:,n))))<treshold_S
