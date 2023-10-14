@@ -80,7 +80,9 @@ for k=1:n
 end
 
 
-
+if n==1 & strcmpi(output,'matrix')
+x=x{1};
+end
 
 
 
