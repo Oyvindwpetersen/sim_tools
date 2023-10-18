@@ -1,4 +1,4 @@
-function x=bellshapednoise(f_low,f_up,t,n)
+function x_sim=bellshapednoise(f_low,f_up,t,n)
 %% Simulate noise from bell-shaped spectrum
 %
 % Inputs:
@@ -41,9 +41,9 @@ omega_mean=f_mean*2*pi;
 omega_up=2*pi*f_up;
 c=sqrt((-0.5*(omega_up-omega_mean).^2)/log(0.05));
 
-S(1,1,:)=exp(-0.5*(w_axis-w_mean).^2/c^2);
+S(1,1,:)=exp(-0.5*(omega_axis-omega_mean).^2/c^2);
 
 % Simulate by MC
-x_sim=mc_sim(omega_axis,S,t,n);
+x_sim=mc_sim(omega_axis,S,t,n,'output','matrix');
 
 x_sim=x_sim./std(x_sim,0,2);
